@@ -1,0 +1,29 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="w3-container">
+<div>
+    <h1> Ticket Approved by Manager </h1>
+    <table border="3" class="table" >
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">From Location</th>
+            <th scope="col">To Location</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Confirm</th>
+            <th scope="col">Not-Available</th>
+        </tr>
+        <tr *ngFor="let t of ticketList" class="table-primary">
+            <td>{{t.agentId}}</td>
+            <td>{{t.fromLocation}}</td>
+            <td>{{t.toLocation}}</td>
+            <td>{{t.seats}}</td>
+            <td class="w3-xlarge"><i class="fa fa-check" style="font-size:px;color:black" (click)="confirm(t)"></i></td>
+            <td class="w3-xlarge"><i class="fa fa-close red-color" style="color: red" (click)="reject(t)"></i></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <a class="logout"href="/users">Logout</a>
+    </div>

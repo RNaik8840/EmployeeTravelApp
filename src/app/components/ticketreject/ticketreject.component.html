@@ -1,0 +1,20 @@
+<div>
+    <h1> Ticket Status </h1>
+    <table border="3" class="table" >
+        <tr>
+            <th scope="col">From Location</th>
+            <th scope="col">To Location</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Action</th>
+        </tr>
+        <tr *ngFor="let t of ticketList" class="table-primary">
+            <td>{{t.fromLocation}}</td>
+            <td>{{t.toLocation}}</td>
+            <td>{{t.seats}}</td>
+            <td>{{message}}</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <a class="logout"href="/employees">Back</a>
+    </div>

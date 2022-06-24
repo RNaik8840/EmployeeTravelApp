@@ -1,0 +1,31 @@
+<div class="row">
+    <section class="section">
+      <header>
+        <h3>Raise Your Ticket</h3>
+      </header>
+      
+          <form [formGroup]="ticketForm" (ngSubmit)="onSubmit(ticketForm.value)"> 
+              <div class="col-md-6 form-item box-item" >
+                  <label for="fromLocation" class="form-label"> Source Location : </label>
+                  <input type="text" class=" form-control border border-3 border border-dark tx1" data-required name="fromLocation" id="FromLocation" placeholder="Enter Source Location" formControlName="fromLocation">
+              </div>
+              <br>
+              <div class="col-md-6 form-item box-item" >
+                <label for="toLocation" class="form-label"> Destination Location : </label>
+                <input type="text" class=" form-control border border-3 border border-dark tx1" data-required name="toLocation" id="ToLocation" placeholder="Enter Destination Location" formControlName="toLocation">
+            </div><br>
+              <div class="col-md-6 form-item box-item" >
+                  <label for="seats" class="form-label"> Enter Seats : </label>
+                  <input type="text" class=" form-control border border-3 border border-dark tx1"  data-required name="seats" id="Seats" placeholder="How many Seats you want to book!" formControlName="seats"> 
+              </div> 
+                <br>
+          
+          <div class="form-item">
+           <button class="submit" value="submit">Raise Ticket</button> 
+          </div>
+        </form>
+        <a class="logout" href="/users">logout</a>
+    </section>
+    <a class="logout" href="/accepts">Check Confirm Ticket</a>
+    <a class="logout" href="/rejects">Check Non Confirm Ticket</a>
+  </div>

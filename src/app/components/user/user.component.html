@@ -1,0 +1,29 @@
+<button><a class="home"href=" ">Home</a></button>
+<h3>Login User</h3>
+<div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+<div>
+<label for="userName">Username</label>
+<input type="text" name="userName" formControlName="userName">
+</div>
+<div>
+<label for="password">Password</label>
+<input type="password" name="password" formControlName="password">
+</div>
+<div>
+<label for="userType">Select Role</label>
+<select name="userType" class="form-control border border-2 border border-dark" id="userType" formControlName="userType">
+<option value="admin"> Admin </option>
+<option value="employee"> Employee </option>
+<option value="manager"> Manager </option>
+<option value="agent"> Agent </option>
+</select>
+</div>
+<div>
+
+<button value="submit"> Login </button>
+</div>
+</form>
+<!--<a [routerLink]="['/users']">Login request</a>-->
+</div>
+

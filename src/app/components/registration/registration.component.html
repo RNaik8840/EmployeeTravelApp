@@ -1,0 +1,44 @@
+<div class="row">
+    <section class="section">
+      <header>
+        <h3>Registration</h3>
+        <h4>Please fill your information in this form</h4>
+        <br>
+      </header>
+      
+          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)"> 
+              <div class="col-md-6 form-item box-item" >
+                  <label for="FirstName" class="form-label"> Enter Your FirstName : </label>
+                  <input type="text" class=" form-control border border-3 border border-dark tx1" data-required name="FirstName" id="FirstName" placeholder="Enter Your FirstName" formControlName="FirstName">
+              </div>
+              <div class="col-md-6 form-item box-item" >
+                <label for="LastName" class="form-label"> Enter Your LastName : </label>
+                <input type="text" class=" form-control border border-3 border border-dark tx1" data-required name="LastName" id="LastName" placeholder="Enter Your LastName" formControlName="LastName">
+            </div>
+              <div class="col-md-6 form-item box-item" >
+                  <label for="Password" class="form-label"> Enter Your Password : </label>
+                  <input type="password" class=" form-control border border-3 border border-dark tx1"  data-required name="Password" id="password" placeholder="Enter Your Password" formControlName="Password"> 
+              </div> 
+              <div class="col-md-6 form-item box-item">
+                  <label for="EmailId" class="form-label"> Enter Email Id : </label>
+                  <input type="email" name="EmailId" id="email" data-required data-number data-count="10" class="tx1 form-control border border-3 border border-dark" placeholder="Enter Email id" formControlName="EmailId"> 
+                </div><br>
+                <div class="col-md-6 form-item box-item">
+                  <label for="MobileNo" class="form-label"> Enter Mobile Number : </label>
+                  <input type="number" name="MobileNo" id="contactNo" class="form-control border border-3 border border-dark" placeholder="Enter Mobile Number" formControlName="MobileNo"> 
+              </div>
+            <!--<div class="col-md-4" class="form-group relative">
+              <label for="UserType" class="form-label"> Select User Type : </label>
+              <select name="UserType" class="form-control border border-2 border border-dark" id="userType" formControlName="UserType">
+                  <option value="customer"> Customer </option>
+                  <option value="businessowner"> Business Owner </option>            
+              </select>   
+          </div>-->
+          <br>
+          <div class="form-item">
+           <button class="submit" class="btn btn-dark" value="submit">Register</button>
+           <br><br>
+          </div>
+        </form>
+    </section>
+  </div>
